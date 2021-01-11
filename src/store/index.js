@@ -7,4 +7,14 @@ export default new Vuex.Store({
   state: {
     counter: 0
   },
+  getters: {
+    computedCounter(state) {
+      return state.counter * 2
+    }
+  },
+  mutations: {
+    changeCounter(state, val) {
+      return state.counter += val
+    }
+  }
 })

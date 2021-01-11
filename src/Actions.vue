@@ -10,7 +10,7 @@
       name: "Actions",
       methods: {
         changeCount(val) {
-          return this.$store.state.counter += val
+          this.$store.commit('changeCounter', val)
         }
       }
     }
