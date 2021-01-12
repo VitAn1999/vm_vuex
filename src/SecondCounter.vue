@@ -1,6 +1,6 @@
 <template>
   <div class="col">
-    <h1>Counter: {{ counter }}</h1>
+    <h2>Counter: {{ counter }}</h2>
   </div>
 </template>
 
