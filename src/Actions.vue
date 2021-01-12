@@ -10,7 +10,11 @@
       name: "Actions",
       methods: {
         changeCount(val) {
-          this.$store.commit('changeCounter', val)
+          // this.$store.commit('changeCounter', val)
+          this.$store.dispatch('asyncChangeCounter', {
+            val,
+            delay: 1000
+          })
         }
       }
     }

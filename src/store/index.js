@@ -16,5 +16,12 @@ export default new Vuex.Store({
     changeCounter(state, val) {
       return state.counter += val
     }
+  },
+  actions: {
+    asyncChangeCounter({commit}, payload) {
+      setTimeout(() => {
+        commit('changeCounter', payload.val)
+      }, payload.delay)
+    }
   }
 })
